@@ -1,0 +1,80 @@
+.home-container .hero-container{
+    background-color: var(--green-primary-bg);
+    border-radius: 0 0 10% 10%;
+    padding: 1rem 5rem;
+}
+
+.home-container .hero-container .hero-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.home-container .hero-text{
+    flex: 3;
+}
+.home-container .hero-text h1{
+    font-size: 3rem;
+    margin: 1rem 0;
+    color: rgba(44, 42, 42, 0.712);
+}
+.home-container .hero-text h1 span{
+    color: var(--black-secondary-text);
+}
+.home-container .hero-text p{
+    font-size: 1rem;
+}
+.home-container .hero-text .hero-btn{
+   padding: 10px 15px;
+   background-color: blueviolet;
+   color: var(--white-secondary-text);
+   margin-top: 1.3rem;
+   font-size: 0.9rem;
+}
+.home-container .hero-img{
+    flex: 1;
+    
+}
+.home-container .hero-img img{
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+}
+.hero-notice{
+    padding-bottom: 10px;
+    border-radius: 20px;
+   
+}
+
+.hero-notice h3{
+    padding-left: 10px;
+    color: var(--black-secondary-text);
+}
+
+.home-container .school-info{
+    padding: 1rem 5rem;
+    margin: 4rem 0;
+}
+
+.home-container .school-info h1{
+    padding-bottom: 3rem;
+    text-align: center;
+    color: var(--black-secondary-text);
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.home-container .school-info h1 span{
+    color: blueviolet;
+}
+
+.home-container .cards{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--white-primary-text);
+    padding: 3rem;
+    border-radius: 10px;
+}

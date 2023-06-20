@@ -1,0 +1,49 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(132, 197, 154, 0.925);
+    font-family: 'Poppins', sans-serif;
+    padding: 5px 20px;
+    height: 75px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 1520px;
+    margin: 0 auto;
+    z-index: 5;
+}
+
+.navbar .logo img{
+    width: 60px;
+}
+
+.navbar .all-link a{
+    font-size: 1rem;
+    color: black;
+    margin: 0 5px;
+    padding: 0 7px;
+}
+
+.navbar .login-btn button{
+    border: 1.5px solid black;
+    outline: none;
+    background-color: transparent;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.navbar .login-btn button:hover{
+    background-color: rgba(121, 50, 187, 0.507);
+    color: #fff;
+    border: none;
+}
+
+.active{
+    color: blueviolet  !important ;
+    border-bottom: 2px solid black;
+}

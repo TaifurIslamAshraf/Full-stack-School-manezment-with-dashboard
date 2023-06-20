@@ -1,0 +1,15 @@
+.card{
+    padding: 1.5rem;
+    color: var(--black-primary-text);
+    border: 1px solid rgba(0, 0, 0, 0.034);
+    transition: all 0.5s;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+.card h3{
+    font-size: 1.3rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: var(--black-secondary-text);
+}

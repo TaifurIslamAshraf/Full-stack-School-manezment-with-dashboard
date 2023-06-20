@@ -1,0 +1,26 @@
+/* google font */
+  @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&family=Roboto:wght@300;400;500;700&display=swap');
+
+  /* font-family: 'Hind Siliguri', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif; */
+
+  *,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    background-color: var(--white-secondary-bg);
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  h1,h2,h3,h4,h5,h6{
+    color: var(--black-secondary-text);
+  }

@@ -1,0 +1,49 @@
+.admission-container{
+    max-width: 700px;
+    margin: auto;
+    padding: 3rem 0;
+   
+}
+.admission-container h4{
+    margin-bottom: 10px;
+
+}
+.admission-container h1{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.admission-container .admission-form{
+    background-color: var(--white-primary-bg);
+    padding: 2rem;
+    border-radius: 10px;
+
+}
+ .parsonal-info, .parants-info, .admission-info{
+    margin-bottom: 30px;
+}
+
+.admission-form .MuiFormControl-root {
+    margin-bottom: 20px;
+  }
+
+  .admission-form .half-inp{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+  }
+
+  .admission-form .file-inp{
+    display: flex;
+    flex-direction: column;
+  }
+  .admission-form .file-inp label{
+    margin-bottom: 7px;
+    color: rgba(0, 0, 0, 0.541);
+  }
+  .admission-form .file-inp input{
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    padding: 15px;
+    border-radius: 5px;
+  }

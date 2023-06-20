@@ -1,0 +1,13 @@
+:root{
+    --white-primary-bg: #F9F5F6;
+    --white-secondary-bg: #ebd9e0;
+    --green-primary-bg: #A0D8B3;
+
+    --white-primary-text: #fff;
+    --white-secondary-text: #F9F7F7;
+    --black-primary-text: #2d3033;
+    --black-secondary-text: #27374D;
+
+    --shadow-primary: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    --shadow-secondary: box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
