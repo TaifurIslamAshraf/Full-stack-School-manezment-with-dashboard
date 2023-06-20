@@ -21,11 +21,7 @@ router.post(
   createTeacher
 );
 
-router.get(
-  "/teacher",
-
-  getTeacher
-);
+router.get("/teacher", getTeacher);
 router.get(
   "/teacher/:id",
   isAuthenticated,
