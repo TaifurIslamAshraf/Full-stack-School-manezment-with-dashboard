@@ -27,6 +27,6 @@ router.get(
   authorizeRoles("admin", "teacher"),
   getAllResult
 );
-router.post("/resultcard", searchResult);
+router.get("/resultcard", searchResult);
 
 module.exports = router;

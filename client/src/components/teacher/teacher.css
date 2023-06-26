@@ -1,0 +1,49 @@
+.teacher-contant {
+  max-width: 1320px;
+  margin: 20px auto;
+}
+.teacher-contant h1{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.teacher-card {
+  margin: 0 20px;
+  background-color: transparent;
+  border-radius: 5px;
+}
+.teacher-card img {
+  border-radius: 5px;
+  height: 250px;
+  width: 200px;
+}
+.teacher-card .teacher-info {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: var(--black-primary-text);
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.171);
+}
+
+.teacher-card .teacher-info h4{
+  font-size: 15px;
+  font-weight: 500;
+  margin: 5px 0;
+}
+.teacher-card .teacher-info p{
+  margin: 3px 0;
+  font-size: 13px;
+  color: var(--black-secondary-text);
+}
+.teacher-card .teacher-btn{
+  width: 500px;
+  margin-top: 100px;
+}
+
+.teacher-card-model{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 30px 0;
+}

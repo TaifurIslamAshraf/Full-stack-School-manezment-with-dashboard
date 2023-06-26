@@ -6,7 +6,7 @@ export const teacherSlice = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: baseUrl }),
   endpoints: (builder) => ({
     getAllTeacher: builder.query({
-      query: () => "/teacher",
+      query: () => "/api/teacher",
     }),
   }),
 });

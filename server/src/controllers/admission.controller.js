@@ -43,7 +43,11 @@ const createAdmission = asyncHandler(async (req, res, next) => {
       previousSchool,
     },
   };
-  console.log(req.files.studentImg[0]);
+
+  const admissionExists = await Admission.exists({ studentId });
+  if (admissionExists) {
+    return next(errorMessage(res, 400, "You Alredy Apply For Admission"));
+  }
 
   const applyedAdmission = await Admission.create(studentData);
 

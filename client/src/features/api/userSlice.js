@@ -9,7 +9,7 @@ export const userSlice = createApi({
   }),
   endpoints: (builder) => ({
     getUser: builder.query({
-      query: () => "/me",
+      query: () => "/api/me",
     }),
   }),
 });

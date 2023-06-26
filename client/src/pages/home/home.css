@@ -2,12 +2,15 @@
     background-color: var(--green-primary-bg);
     border-radius: 0 0 10% 10%;
     padding: 1rem 5rem;
+    
 }
 
 .home-container .hero-container .hero-content{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1320px;
+    margin: 0 auto;
 
 }
 .home-container .hero-text{
@@ -43,6 +46,8 @@
 .hero-notice{
     padding-bottom: 10px;
     border-radius: 20px;
+    max-width: 1320px;
+    margin: 0 auto;
    
 }
 
@@ -68,7 +73,7 @@
     color: blueviolet;
 }
 
-.home-container .cards{
+.home-container .school-info .cards{
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: center;
@@ -77,4 +82,11 @@
     background-color: var(--white-primary-text);
     padding: 3rem;
     border-radius: 10px;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.teacher-info{
+    background-color: var(--white-primary-text);
+    padding: 1rem 5rem;
 }

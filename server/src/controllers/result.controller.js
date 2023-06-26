@@ -73,20 +73,28 @@ const updateResult = asyncHandler(async (req, res, next) => {
 
 //search result -- student
 const searchResult = asyncHandler(async (req, res, next) => {
-  const { studentId, semester, examYear } = req.body;
+  const studentId = Number(req.query.studentId);
+  const semester = req.query.semester;
+  const examYear = Number(req.query.examYear);
+
+  const studentName = await Admission.findOne({ studentId });
 
   const result = await Result.find({ studentId, semester, examYear });
-
+  console.log(result);
   if (result.length === 0) {
-    res.status(400).json({
+    return res.status(400).json({
       success: false,
-      message: "Your Result Not found. Please enter valid information",
+      message: "Your Result was not found. Please enter valid information.",
     });
   }
-
   res.status(200).json({
     success: true,
-    studentResult: result,
+    studentResult: {
+      result,
+      studentName: studentName.personalInfo.fullName,
+      semester: semester,
+      examYear,
+    },
   });
 });
 

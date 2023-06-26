@@ -1,7 +1,4 @@
 .navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: rgba(132, 197, 154, 0.925);
     font-family: 'Poppins', sans-serif;
     padding: 5px 20px;
@@ -11,9 +8,14 @@
     top: 0;
     left: 0;
     right: 0;
-    max-width: 1520px;
-    margin: 0 auto;
     z-index: 5;
+}
+.nav-contant{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1320px;
+    margin: 0 auto;
 }
 
 .navbar .logo img{

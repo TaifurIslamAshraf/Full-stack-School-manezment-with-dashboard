@@ -12,7 +12,7 @@ const Navbar = () => {
   const { isSuccess: isMeSuccess } = useGetUserQuery();
 
   const handleLogout = async () => {
-    const { data } = await axios.get(`${baseUrl}/logout`, {
+    const { data } = await axios.get(`${baseUrl}/api/logout`, {
       withCredentials: true,
     });
     if (data.success) {
@@ -26,27 +26,30 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <Link to="/" className="logo">
-        <img loading="eager" src={Logo} alt="logo" />
-      </Link>
-      <div className="all-link">
-        <NavLink end to={"/"}>
-          Home
-        </NavLink>
-        <NavLink to={"/notice"}>Notice</NavLink>
-        <NavLink to={"/article"}>Article</NavLink>
-        <NavLink to={"/about"}>About</NavLink>
-        <NavLink to={"/contact"}>Contact</NavLink>
-      </div>
-      {isMeSuccess ? (
-        <div className="login-btn">
-          <button onClick={handleLogout}>Logout</button>
-        </div>
-      ) : (
-        <Link to={"/login"} className="login-btn">
-          <button>Login</button>
+      <div className="nav-contant">
+        <Link to="/" className="logo">
+          <img loading="eager" src={Logo} alt="logo" />
         </Link>
-      )}
+        <div className="all-link">
+          <NavLink end to={"/"}>
+            Home
+          </NavLink>
+          <NavLink to={"/notice"}>Notice</NavLink>
+          <NavLink to={"/article"}>Article</NavLink>
+          <NavLink to={"/result"}>Result</NavLink>
+          <NavLink to={"/about"}>About</NavLink>
+          <NavLink to={"/contact"}>Contact</NavLink>
+        </div>
+        {isMeSuccess ? (
+          <div className="login-btn">
+            <button onClick={handleLogout}>Logout</button>
+          </div>
+        ) : (
+          <Link to={"/login"} className="login-btn">
+            <button>Login</button>
+          </Link>
+        )}
+      </div>
     </nav>
   );
 };

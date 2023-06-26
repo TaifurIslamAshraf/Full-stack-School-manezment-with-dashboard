@@ -8,7 +8,7 @@ export const admissionApi = createApi({
   endpoints: (builder) => ({
     addAdmission: builder.mutation({
       query: (formData) => ({
-        url: "/admission",
+        url: "/api/admission",
         method: "POST",
         body: formData,
         credentials: "include",

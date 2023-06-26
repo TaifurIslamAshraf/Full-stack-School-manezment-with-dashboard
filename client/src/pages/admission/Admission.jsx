@@ -1,30 +1,39 @@
 import { Button, MenuItem, TextField } from "@mui/material";
 import { Field, Form, Formik } from "formik";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { date, number, object, string } from "yup";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAddAdmissionMutation } from "../../features/api/admissionSlice";
 import { allClasses, genderData } from "../../utils/data";
 import "./admission.css";
 
 const Admission = () => {
   const [studentImg, setStudentImg] = useState(null);
-  const [addAdmission, { isLoading }] = useAddAdmissionMutation();
+  const [addAdmission, { isLoading, isSuccess, isError, error, reset }] =
+    useAddAdmissionMutation();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isSuccess) {
+      reset();
+      navigate("/success/admission", { replace: true });
+      setStudentImg([]);
+    } else if (isError) {
+      toast.error(error.data.message);
+    }
+  }, [isSuccess, isError, error, reset, navigate]);
 
   const handleSubmit = async (values, formikHelpers) => {
     const formData = new FormData();
-
     formData.append("studentImg", studentImg);
+
     Object.entries(values).forEach(([key, value]) => {
       formData.append(key, value);
     });
+
     addAdmission(formData);
-
-    navigate("/success/admission", { replace: true });
-
-    setStudentImg([]);
     formikHelpers.resetForm();
   };
 
@@ -191,28 +200,30 @@ const Admission = () => {
                     Boolean(touched.studentNumber) && errors.studentNumber
                   }
                 />
-                <Field
-                  name="email"
-                  type="email"
-                  as={TextField}
-                  variant="outlined"
-                  color="primary"
-                  label="Email"
-                  fullWidth
-                  error={Boolean(errors.email) && Boolean(touched.email)}
-                  helperText={Boolean(touched.email) && errors.email}
-                />
-                <Field
-                  name="address"
-                  type="text"
-                  as={TextField}
-                  variant="outlined"
-                  color="primary"
-                  label="Address"
-                  fullWidth
-                  error={Boolean(errors.address) && Boolean(touched.address)}
-                  helperText={Boolean(touched.address) && errors.address}
-                />
+                <div className="half-inp">
+                  <Field
+                    name="email"
+                    type="email"
+                    as={TextField}
+                    variant="outlined"
+                    color="primary"
+                    label="Email"
+                    fullWidth
+                    error={Boolean(errors.email) && Boolean(touched.email)}
+                    helperText={Boolean(touched.email) && errors.email}
+                  />
+                  <Field
+                    name="address"
+                    type="text"
+                    as={TextField}
+                    variant="outlined"
+                    color="primary"
+                    label="Address"
+                    fullWidth
+                    error={Boolean(errors.address) && Boolean(touched.address)}
+                    helperText={Boolean(touched.address) && errors.address}
+                  />
+                </div>
                 <div className="file-inp">
                   <label htmlFor="studentImg">Student Image</label>
                   <input

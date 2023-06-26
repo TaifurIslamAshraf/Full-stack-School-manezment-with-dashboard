@@ -15,12 +15,13 @@
     font-family: 'Roboto', sans-serif;
     width: 100%;
     background-color: var(--white-secondary-bg);
+
   }
 
   a{
     text-decoration: none;
   }
 
-  h1,h2,h3,h4,h5,h6{
+  h1,h2{
     color: var(--black-secondary-text);
   }

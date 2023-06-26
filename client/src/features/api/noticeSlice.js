@@ -6,7 +6,7 @@ export const noticeSlice = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: baseUrl }),
   endpoints: (builder) => ({
     getNotice: builder.query({
-      query: () => "/notice",
+      query: () => "/api/notice",
     }),
   }),
 });

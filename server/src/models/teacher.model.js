@@ -17,13 +17,18 @@ const teacherSchema = new mongoose.Schema(
     email: {
       type: String,
       unique: true,
-      required: [true, "Email is required"],
       validate: [validator.isEmail, ["Please enter a valid email"]],
     },
-    subjects: [{ type: String, required: true }],
+    educationTitle: { type: String, required: true },
     image: {
-      type: String,
-      required: true,
+      name: {
+        type: String,
+        required: true,
+      },
+      path: {
+        type: String,
+        required: true,
+      },
     },
 
     phoneNumber: { type: String, required: true },

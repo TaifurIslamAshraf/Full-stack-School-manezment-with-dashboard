@@ -5,7 +5,7 @@ import "./home.css";
 
 import { Link } from "react-router-dom";
 import HeroImg from "../../assets/images/img-hero.png";
-import Loading from "../../components/Loader/Loading";
+import { FullLoader } from "../../components/Loaders/Loaders";
 import Cards from "../../components/cards/Cards";
 import Teacher from "../../components/teacher/Teacher";
 import { useGetNoticeQuery } from "../../features/api/noticeSlice";
@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <>
       {isLoading ? (
-        <Loading />
+        <FullLoader />
       ) : (
         <div className="home-container">
           <div className="hero-container">

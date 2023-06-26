@@ -6,14 +6,18 @@ const deleteImage = require("../helpers/deleteImage");
 
 //create teacher
 const createTeacher = asyncHandler(async (req, res, next) => {
-  const { fullName, age, email, subjects, phoneNumber, address } = req.body;
+  const { fullName, age, email, educationTitle, phoneNumber, address } =
+    req.body;
 
   const teacher = await Teacher.create({
     fullName,
     age,
     email,
-    subjects,
-    image: req.file?.filename,
+    educationTitle,
+    image: {
+      name: req.file?.filename,
+      path: req.file?.path,
+    },
     phoneNumber,
     address,
   });
