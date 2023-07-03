@@ -60,7 +60,11 @@ const Teacher = () => {
           </Marquee>
           <div>
             <Box textAlign="center" marginTop={5}>
-              <Button variant="contained" onClick={handleClickOpen}>
+              <Button
+                size="large"
+                variant="contained"
+                onClick={handleClickOpen}
+              >
                 See All Teacher
               </Button>
             </Box>

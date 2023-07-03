@@ -2,7 +2,7 @@ import { TextField } from "@mui/material";
 import { useField } from "formik";
 
 // eslint-disable-next-line react/prop-types
-const FormikTextField = ({ label, ...props }) => {
+const TextInput = ({ label, ...props }) => {
   const [field, meta] = useField(props);
 
   return (
@@ -16,4 +16,4 @@ const FormikTextField = ({ label, ...props }) => {
   );
 };
 
-export default FormikTextField;
+export default TextInput;

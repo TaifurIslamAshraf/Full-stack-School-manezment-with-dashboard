@@ -1,62 +1,35 @@
-import { Button } from "@mui/material";
 import { Form, Formik } from "formik";
-import React, { useEffect, useState } from "react";
-import { number, object, string } from "yup";
-import FormikTextField from "../components/FormsUi/TextFields";
+import * as Yup from "yup";
+import TextInput from "../components/FormsUi/TextFields";
 
-const Test = () => {
-  const [submittedData, setSubmittedData] = useState(null);
+const validationSchema = Yup.object({
+  name: Yup.string().required("Name is required"),
+  email: Yup.string().email("Invalid email").required("Email is required"),
+  // Add more validation rules for other fields
+});
 
-  const handleSubmit = async (values) => {
-    setSubmittedData(values);
-  };
-
-  const initialValues = {
-    studentId: "",
-    fullName: "",
-  };
-
-  const validationSchema = object().shape({
-    studentId: number().required("Please enter the birth certificate number"),
-    fullName: string()
-      .required("Please enter your full name")
-      .min(4, "Name is too short"),
-  });
-
-  useEffect(() => {
-    if (submittedData) {
-      console.log("Submitted Data:", submittedData);
-    }
-  }, [submittedData]);
-
+const MyForm = () => {
   return (
-    <div className="test-container">
-      <h2>Admission Form</h2>
-      <Formik
-        initialValues={initialValues}
-        onSubmit={handleSubmit}
-        validationSchema={validationSchema}
-      >
-        <Form>
-          <div className="parsonal-info">
-            <FormikTextField name="fullName" label="Full Name" />
-          </div>
-
-          <Button type="submit" variant="contained" color="primary" fullWidth>
-            Sign up
-          </Button>
-        </Form>
-      </Formik>
-
-      {submittedData && (
-        <div className="submitted-data">
-          <h3>Submitted Data:</h3>
-          <p>Full Name: {submittedData.fullName}</p>
-          {/* Display other form values similarly */}
-        </div>
-      )}
-    </div>
+    <Formik
+      initialValues={{
+        name: "",
+        email: "",
+        // Add more fields here
+      }}
+      validationSchema={validationSchema}
+      onSubmit={(values) => {
+        // Handle form submission
+        console.log(values);
+      }}
+    >
+      <Form>
+        <TextInput name="name" label="Name" />
+        <TextInput name="email" label="Email" />
+        {/* Add more input fields */}
+        <button type="submit">Submit</button>
+      </Form>
+    </Formik>
   );
 };
 
-export default Test;
+export default MyForm;

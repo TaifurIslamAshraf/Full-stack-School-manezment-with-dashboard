@@ -90,3 +90,24 @@
     background-color: var(--white-primary-text);
     padding: 1rem 5rem;
 }
+
+.home-container .all-class{
+    padding: 4rem 0;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.home-container .all-class h1{
+    text-align: center;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+.home-container .all-class h1 span{
+    color: blueviolet;
+}
+.home-container .all-class h4{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--black-secondary-text);
+   
+}

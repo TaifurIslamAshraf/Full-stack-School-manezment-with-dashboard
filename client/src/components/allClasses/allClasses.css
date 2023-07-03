@@ -1,0 +1,50 @@
+.class-card{
+    padding: 1rem;
+    background-color: var(--white-primary-bg);
+    border-radius: 5px;
+}
+
+.class-card .class-img{
+    width: 100%;
+    height: 200px;
+
+}
+
+.class-card .class-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.class-card h3{
+    margin: 7px 0;
+    color: var(--black-primary-text);
+}
+.class-card p{
+    margin-bottom: 10px;
+}
+
+.mySwiper{
+    margin: 0 3rem;
+    padding-bottom: 3rem;
+}
+
+.class-card-model img{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.class-card-model h1{
+    padding: 10px 0;
+}
+.class-card-model h3{
+    margin-bottom: 7px;
+}
+.class-card-model p{
+    padding: 5px 2px;
+}
+.class-card-model button{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
