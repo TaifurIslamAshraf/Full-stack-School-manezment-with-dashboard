@@ -1,0 +1,11 @@
+.mySchool-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.mySchool-info img{
+    width: 70px;
+}

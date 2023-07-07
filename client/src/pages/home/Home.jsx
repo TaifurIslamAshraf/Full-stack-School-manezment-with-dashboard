@@ -8,6 +8,7 @@ import HeroImg from "../../assets/images/img-hero.png";
 import { FullLoader } from "../../components/Loaders/Loaders";
 import AllClasses from "../../components/allClasses/AllClasses";
 import Cards from "../../components/cards/Cards";
+import MySchool from "../../components/mySchool/MySchool";
 import Teacher from "../../components/teacher/Teacher";
 import { useGetNoticeQuery } from "../../features/api/noticeSlice";
 
@@ -116,6 +117,10 @@ const Home = () => {
             </h1>
             <h4>Everything from play to intermediate.</h4>
             <AllClasses />
+          </div>
+
+          <div className="my-school">
+            <MySchool />
           </div>
         </div>
       )}
