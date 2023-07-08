@@ -2,6 +2,7 @@ const asyncHandler = require("express-async-handler");
 
 const Admission = require("../models/admission.model");
 const { errorMessage } = require("../middlewares/error");
+const { extraImgDelete } = require("../helpers/deleteImage");
 
 //create admission
 const createAdmission = asyncHandler(async (req, res, next) => {
@@ -31,7 +32,7 @@ const createAdmission = asyncHandler(async (req, res, next) => {
       studentNumber,
       email,
       address,
-      studentImg: req.files.studentImg[0].filename,
+      image: req.file?.filename,
     },
     parentInfo: {
       name,
@@ -50,6 +51,13 @@ const createAdmission = asyncHandler(async (req, res, next) => {
   }
 
   const applyedAdmission = await Admission.create(studentData);
+
+  // const allAdmission = await Admission.find();
+  // await extraImgDelete(
+  //   allAdmission,
+  //   "public/uploads/admissionReqStudent",
+  //   "personalInfo.image"
+  // );
 
   res.status(201).json({
     success: true,

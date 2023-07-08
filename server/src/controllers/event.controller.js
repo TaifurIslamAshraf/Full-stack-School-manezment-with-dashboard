@@ -1,11 +1,12 @@
 const asyncHandler = require("express-async-handler");
+const fs = require("fs").promises;
 const { Server } = require("socket.io");
 
 const httpServer = require("../../socket");
 const Event = require("../models/event.model");
 const Notification = require("../models/notification.model");
 const { errorMessage } = require("../middlewares/error");
-const deleteImage = require("../helpers/deleteImage");
+const { deleteImage, extraImgDelete } = require("../helpers/deleteImage");
 
 //create event
 const createEvent = asyncHandler(async (req, res, next) => {
@@ -20,6 +21,9 @@ const createEvent = asyncHandler(async (req, res, next) => {
     description,
     image: req.file?.filename,
   });
+
+  const allEvent = await Event.find();
+  await extraImgDelete(allEvent, "public/uploads/eventsPhoto");
 
   // const notification = await Notification.create({
   //   message: "Publish new event",
@@ -94,7 +98,7 @@ const deleteEvent = asyncHandler(async (req, res, next) => {
     return next(errorMessage(res, 400, "Event not found !"));
   }
 
-  await deleteImage(`public/uploads/eventsPhoto/${event.image}`);
+  await deleteImage([`public/uploads/eventsPhoto/${event.image}`]);
 
   await Event.findByIdAndDelete(req.params.id);
 

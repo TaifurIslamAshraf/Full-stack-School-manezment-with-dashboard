@@ -10,7 +10,7 @@ import { allClasses, genderData } from "../../utils/data";
 import "./admission.css";
 
 const Admission = () => {
-  const [studentImg, setStudentImg] = useState(null);
+  const [image, setImage] = useState(null);
   const [addAdmission, { isLoading, isSuccess, isError, error, reset }] =
     useAddAdmissionMutation();
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const Admission = () => {
     if (isSuccess) {
       reset();
       navigate("/success/admission", { replace: true });
-      setStudentImg([]);
+      setImage(null);
     } else if (isError) {
       toast.error(error.data.message);
     }
@@ -27,7 +27,7 @@ const Admission = () => {
 
   const handleSubmit = async (values, formikHelpers) => {
     const formData = new FormData();
-    formData.append("studentImg", studentImg);
+    formData.append("image", image);
 
     Object.entries(values).forEach(([key, value]) => {
       formData.append(key, value);
@@ -228,10 +228,10 @@ const Admission = () => {
                   <label htmlFor="studentImg">Student Image</label>
                   <input
                     type="file"
-                    name="studentImg"
+                    name="image"
                     required
                     accept="image/*"
-                    onChange={(e) => setStudentImg(e.target.files[0])}
+                    onChange={(e) => setImage(e.target.files[0])}
                   />
                 </div>
               </div>

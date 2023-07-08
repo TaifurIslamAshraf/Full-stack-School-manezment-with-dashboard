@@ -25,6 +25,7 @@ router.put(
   "/event/:id",
   isAuthenticated,
   authorizeRoles("admin", "teacher"),
+  upload.single("image"),
   updateEvent
 );
 router.delete(

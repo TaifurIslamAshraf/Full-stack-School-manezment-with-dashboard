@@ -13,11 +13,7 @@ const {
   getSingleAdmission,
 } = require("../controllers/admission.controller");
 
-router.post(
-  "/admission",
-  upload.fields([{ name: "studentImg", maxCount: 1 }]),
-  createAdmission
-);
+router.post("/admission", upload.single("image"), createAdmission);
 router.get(
   "/admission",
   isAuthenticated,

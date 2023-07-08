@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import { setupListeners } from "@reduxjs/toolkit/query/react";
 import { admissionApi } from "../features/api/admissionSlice";
+import { gpaStudentSlice } from "../features/api/gpaStudentSlice";
 import { noticeSlice } from "../features/api/noticeSlice";
 import { resultSlice } from "../features/api/resultSlice";
 import { teacherSlice } from "../features/api/teacherSlice";
@@ -14,6 +15,7 @@ const store = configureStore({
     [admissionApi.reducerPath]: admissionApi.reducer,
     [teacherSlice.reducerPath]: teacherSlice.reducer,
     [resultSlice.reducerPath]: resultSlice.reducer,
+    [gpaStudentSlice.reducerPath]: gpaStudentSlice.reducer,
   },
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware().concat(
@@ -21,7 +23,8 @@ const store = configureStore({
       userSlice.middleware,
       admissionApi.middleware,
       teacherSlice.middleware,
-      resultSlice.middleware
+      resultSlice.middleware,
+      gpaStudentSlice.middleware
     );
   },
 });

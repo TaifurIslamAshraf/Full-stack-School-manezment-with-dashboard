@@ -25,7 +25,7 @@ const studentSchema = new mongoose.Schema({
       validate: [validator.isEmail, "Please enter a valid email"],
     },
     address: { type: String, required: true },
-    studentImg: {
+    image: {
       type: String,
       required: true,
     },

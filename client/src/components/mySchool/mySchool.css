@@ -1,8 +1,13 @@
 .mySchool-container{
     max-width: 1320px;
     margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, 0.123);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .mySchool-container h2{
     margin-bottom: 20px;
+    color: var(--black-secondary-text);
 }

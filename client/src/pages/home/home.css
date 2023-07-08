@@ -114,5 +114,8 @@
 .home-container .my-school{
     background-color: var(--white-primary-bg);
     padding: 4rem;
-    
+}
+
+.home-container .gpa-student{
+    padding: 4rem;
 }

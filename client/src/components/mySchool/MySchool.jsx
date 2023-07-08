@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
 import { AllImages } from "../../utils/AllImages";
@@ -21,18 +21,20 @@ const MySchool = () => {
           text="A+ Students"
         />
       </div>
-      <h2>
+      <h3>
         Emotional and social development of students through introduction to our
         school Always eager to do. From the link below for school admission Fill
         the form and details about school contact and facilities Always contact
         us to know.
-      </h2>
+      </h3>
 
-      <Link to="/admission">
-        <Button variant="contained" size="large">
-          Admission Now
-        </Button>
-      </Link>
+      <Box textAlign="end">
+        <Link to="/admission">
+          <Button variant="contained" size="large">
+            Admission Now
+          </Button>
+        </Link>
+      </Box>
     </div>
   );
 };
