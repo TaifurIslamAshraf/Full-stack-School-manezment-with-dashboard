@@ -1,11 +1,9 @@
-import { useGetGpaStudentQuery } from "../../features/api/gpaStudentSlice";
+import GpaStudentData from "./GpaStudentData";
 import "./GpaStudents.css";
 
 const GpaStudents = () => {
-  const { data, isLoading, isSuccess, isError } = useGetGpaStudentQuery();
-  console.log(data);
   return (
-    <div>
+    <div className="gpa-containt">
       <div className="gpa-text">
         <h1>
           G.P.A <span>5.00</span> students
@@ -15,7 +13,9 @@ const GpaStudents = () => {
           and HSC examination
         </p>
       </div>
-      <div className="gpa-img"></div>
+      <div className="gpa-img">
+        <GpaStudentData />
+      </div>
     </div>
   );
 };

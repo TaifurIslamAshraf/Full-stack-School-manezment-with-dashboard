@@ -1,0 +1,50 @@
+.gpa-info {
+  text-align: center;
+  margin: 0 0.5rem;
+}
+
+.gpa-info img {
+  border-radius: 5px;
+  height: 250px;
+  width: 200px;
+  position: relative;
+}
+.gpa-containt .gpa-text{
+    margin-bottom: 30px;
+
+}
+.gpa-containt .gpa-text h1{
+     text-align: center;
+     text-transform: uppercase;
+     margin-bottom: 5px;
+}
+
+.gpa-containt .gpa-text h1 span{
+    color: blueviolet;
+}
+
+.gpa-containt .gpa-text p{
+    text-align: center;
+}
+
+.gpa-info .gpa-text-info {
+  border: 1px solid rgba(0, 0, 0, 0.103);
+}
+.gpa-info .gpa-text-info h4 {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 5px 0;
+}
+.gpa-info .gpa-text-info p{
+    margin: 3px 0;
+  font-size: 13px;
+  color: var(--black-secondary-text);
+}
+
+.customModal {
+   border-radius: 10px;
+  }
+  .gpa-modal-card{
+    display: flex;
+    flex-wrap: wrap;
+  }

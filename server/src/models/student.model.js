@@ -12,6 +12,7 @@ const studentSchema = new mongoose.Schema(
       required: true,
     },
     image: {
+      required: true,
       type: String,
     },
     grade: {
