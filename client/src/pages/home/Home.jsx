@@ -8,6 +8,7 @@ import HeroImg from "../../assets/images/img-hero.png";
 import { FullLoader } from "../../components/Loaders/Loaders";
 import AllClasses from "../../components/allClasses/AllClasses";
 import Cards from "../../components/cards/Cards";
+import Director from "../../components/director/Director";
 import GpaStudents from "../../components/gpaStudents/GpaStudents";
 import MySchool from "../../components/mySchool/MySchool";
 import Teacher from "../../components/teacher/Teacher";
@@ -126,6 +127,10 @@ const Home = () => {
 
           <div className="gpa-student">
             <GpaStudents />
+          </div>
+
+          <div className="director-section">
+            <Director />
           </div>
         </div>
       )}

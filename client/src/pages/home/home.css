@@ -119,3 +119,9 @@
 .home-container .gpa-student{
     padding: 4rem;
 }
+
+
+.director-section{
+    background-color: var(--white-primary-bg);
+    padding: 4rem;
+}
