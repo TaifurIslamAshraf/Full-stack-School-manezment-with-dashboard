@@ -36,7 +36,7 @@
   margin: 5px 0;
 }
 .gpa-info .gpa-text-info p{
-    margin: 3px 0;
+  margin: 3px 0;
   font-size: 13px;
   color: var(--black-secondary-text);
 }
@@ -47,4 +47,6 @@
   .gpa-modal-card{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
   }

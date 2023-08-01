@@ -8,7 +8,9 @@ import HeroImg from "../../assets/images/img-hero.png";
 import { FullLoader } from "../../components/Loaders/Loaders";
 import AllClasses from "../../components/allClasses/AllClasses";
 import Cards from "../../components/cards/Cards";
+import Contact from "../../components/contact/Contact";
 import Director from "../../components/director/Director";
+import MyFaq from "../../components/faq/FAQ";
 import GpaStudents from "../../components/gpaStudents/GpaStudents";
 import MySchool from "../../components/mySchool/MySchool";
 import Teacher from "../../components/teacher/Teacher";
@@ -131,6 +133,16 @@ const Home = () => {
 
           <div className="director-section">
             <Director />
+          </div>
+
+          <div className="faq-section">
+            <h1>FAQ</h1>
+            <h4>Your Qustion Answare</h4>
+            <MyFaq />
+          </div>
+
+          <div className="contact-section">
+            <Contact />
           </div>
         </div>
       )}

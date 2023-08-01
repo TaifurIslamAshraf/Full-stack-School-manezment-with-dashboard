@@ -1,0 +1,26 @@
+.contact-heading{
+    text-align: center;
+}
+.contact-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 3rem;
+}
+.contact-details .contact-card{
+    background-color: var(--white-secondary-bg);
+    padding: 1rem;
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+}
+.contact-card .contact-link a{
+   display: flex;
+   gap: 0.5rem;
+   margin: 8px 0;
+}
+.contact-details .map{
+    border-radius: 10px;
+    border: none;
+}

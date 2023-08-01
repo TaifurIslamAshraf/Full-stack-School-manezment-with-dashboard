@@ -44,7 +44,7 @@ export default function App() {
               </p>
               <div className="dir-detail">
                 <h2>Saiful Islam</h2>
-                <h4>B.A Honours Arabic</h4>
+                <h3>B.A Honours Arabic</h3>
                 <p>Director of Gobindapur S.A.M</p>
               </div>
             </div>
@@ -74,7 +74,7 @@ export default function App() {
               </p>
               <div className="dir-detail">
                 <h2>Hasan Mahmud</h2>
-                <h4>B.A Honours Bangla</h4>
+                <h3>B.A Honours Bangla</h3>
                 <p>Executive Director of Gobindapur S.A.M</p>
               </div>
             </div>

@@ -125,3 +125,21 @@
     background-color: var(--white-primary-bg);
     padding: 4rem;
 }
+.faq-section{
+    background-color: var(--white-secondary-bg);
+    padding: 4rem;
+}
+
+.faq-section > h1,h4{
+    text-align: center;
+    margin-bottom: 5px;
+}
+.faq-section > h4{
+    margin-bottom: 1.5rem;
+
+}
+
+.contact-section{
+    background-color: var(--white-primary-bg);
+    padding: 4rem;
+}
