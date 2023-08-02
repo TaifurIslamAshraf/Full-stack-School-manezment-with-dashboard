@@ -143,3 +143,8 @@
     background-color: var(--white-primary-bg);
     padding: 4rem;
 }
+
+.footer-section{
+    background-color: var(--white-secondary-bg);
+    padding: 4rem;
+}

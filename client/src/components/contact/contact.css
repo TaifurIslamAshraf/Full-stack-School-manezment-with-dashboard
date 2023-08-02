@@ -20,6 +20,18 @@
    gap: 0.5rem;
    margin: 8px 0;
 }
+.contact-card .social-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.contact-card .social-link a{
+    background-color: #ffffff5d;
+    padding: 5px;
+    border-radius: 0.5rem;
+    backdrop-filter: blur(10px);
+}
 .contact-details .map{
     border-radius: 10px;
     border: none;

@@ -11,6 +11,7 @@ import Cards from "../../components/cards/Cards";
 import Contact from "../../components/contact/Contact";
 import Director from "../../components/director/Director";
 import MyFaq from "../../components/faq/FAQ";
+import Footer from "../../components/footer/Footer";
 import GpaStudents from "../../components/gpaStudents/GpaStudents";
 import MySchool from "../../components/mySchool/MySchool";
 import Teacher from "../../components/teacher/Teacher";
@@ -143,6 +144,10 @@ const Home = () => {
 
           <div className="contact-section">
             <Contact />
+          </div>
+
+          <div className="footer-section">
+            <Footer />
           </div>
         </div>
       )}
