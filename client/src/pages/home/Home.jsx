@@ -15,6 +15,7 @@ import Footer from "../../components/footer/Footer";
 import GpaStudents from "../../components/gpaStudents/GpaStudents";
 import MySchool from "../../components/mySchool/MySchool";
 import Teacher from "../../components/teacher/Teacher";
+import ToggleBtn from "../../components/toggleBtn/ToggleBtn";
 import { useGetNoticeQuery } from "../../features/api/noticeSlice";
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
       ) : (
         <div className="home-container">
           <div className="hero-container">
+            <ToggleBtn />
             <div className="hero-content">
               <div className="hero-text">
                 <h1>
@@ -70,7 +72,7 @@ const Home = () => {
 
           <div className="school-info">
             <h1>
-              Facilities of a <span>School</span> at a Glance
+              <span>School</span> Info
             </h1>
             <div className="cards">
               <Cards

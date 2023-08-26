@@ -1,13 +1,26 @@
-.mySchool-info{
+.mySchool-info-content{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 5px;
     margin-bottom: 10px;
 }
 
-
-
 .mySchool-info img{
     width: 70px;
+}
+
+@media screen and (max-width: 720px) {
+    .mySchool-info-content{
+        margin-bottom: 2.5rem;
+        background-color: var(--white-secondary-bg);
+        padding: 10px 2rem;
+    }
+    .mySchool-info img{
+        width: 85px;
+    }
+
+    .home-container .my-school {
+        padding: 2rem;
+    }
 }

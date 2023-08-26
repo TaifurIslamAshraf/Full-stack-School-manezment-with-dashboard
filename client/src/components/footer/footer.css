@@ -50,3 +50,20 @@
     align-items: center;
     justify-content: space-between;
 }
+
+@media screen and (max-width: 1024px) {
+    .main-footer{
+        flex-direction: column;
+    }
+
+    .main-footer .footer-link1 a{
+    display: inline-block;
+    margin: 1rem 1rem;
+    }
+
+    .main-footer .footer-link2 a{
+        display: inline-block;
+        margin: 1rem 1rem;
+    }
+    
+}

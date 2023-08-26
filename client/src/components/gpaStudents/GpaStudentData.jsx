@@ -72,7 +72,7 @@ const GpaStudentData = () => {
             variant="contained"
             onClick={() => setOpen(true)}
           >
-            See All Teacher
+            See All Student
           </Button>
         </Box>
       </div>

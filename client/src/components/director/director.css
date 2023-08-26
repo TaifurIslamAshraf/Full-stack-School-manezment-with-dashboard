@@ -41,3 +41,29 @@
 .director-containt .directorText .dir-detail h2{
     margin-bottom: 5px;
 }
+
+@media screen and (max-width: 1024px) {
+    .director-containt{
+       flex-direction: column;
+    }
+    .director-containt .line{
+        display: none;
+    }
+    .director-containt .dir-img{
+        padding: 2rem 0;
+    }
+    .director-containt img{
+        width: 500px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .director-containt img{
+        max-width: 300px;
+    }
+    .director-containt .directorText{
+        padding: 0 1rem;
+    }
+    .director-heading h1{
+        font-size: 1.5rem;
+    }
+}

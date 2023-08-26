@@ -1,150 +1,208 @@
-.home-container .hero-container{
-    background-color: var(--green-primary-bg);
-    border-radius: 0 0 10% 10%;
-    padding: 1rem 5rem;
-    
+.home-container .hero-container {
+  background-color: var(--green-primary-bg);
+  border-radius: 0 0 10% 10%;
+  padding: 1rem 5rem;
 }
 
-.home-container .hero-container .hero-content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1320px;
-    margin: 0 auto;
-
+.home-container .hero-container .hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1320px;
+  margin: 0 auto;
 }
-.home-container .hero-text{
-    flex: 3;
+.home-container .hero-text {
+  flex: 3;
 }
-.home-container .hero-text h1{
-    font-size: 3rem;
-    margin: 1rem 0;
-    color: rgba(44, 42, 42, 0.712);
+.home-container .hero-text h1 {
+  font-size: 3rem;
+  margin: 1rem 0;
+  color: rgba(44, 42, 42, 0.712);
 }
-.home-container .hero-text h1 span{
-    color: var(--black-secondary-text);
+.home-container .hero-text h1 span {
+  color: var(--black-secondary-text);
 }
-.home-container .hero-text p{
-    font-size: 1rem;
+.home-container .hero-text p {
+  font-size: 1rem;
 }
-.home-container .hero-text .hero-btn{
-   padding: 10px 15px;
-   background-color: blueviolet;
-   color: var(--white-secondary-text);
-   margin-top: 1.3rem;
-   font-size: 0.9rem;
+.home-container .hero-text .hero-btn {
+  padding: 10px 15px;
+  background-color: blueviolet;
+  color: var(--white-secondary-text);
+  margin-top: 1.3rem;
+  font-size: 0.9rem;
 }
-.home-container .hero-img{
-    flex: 1;
-    
+.home-container .hero-img {
+  flex: 1;
 }
-.home-container .hero-img img{
-    width: 500px;
-    height: 400px;
-    object-fit: cover;
+.home-container .hero-img img {
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
 }
-.hero-notice{
-    padding-bottom: 10px;
-    border-radius: 20px;
-    max-width: 1320px;
-    margin: 0 auto;
-   
+.hero-notice {
+  padding-bottom: 10px;
+  border-radius: 20px;
+  max-width: 1320px;
+  margin: 0 auto;
 }
 
-.hero-notice h3{
-    padding-left: 10px;
-    color: var(--black-secondary-text);
+.hero-notice h3 {
+  padding-left: 10px;
+  color: var(--black-secondary-text);
 }
 
-.home-container .school-info{
-    padding: 1rem 5rem;
-    margin: 4rem 0;
+.home-container .school-info {
+  padding: 1rem 5rem;
+  margin: 4rem 0;
 }
 
-.home-container .school-info h1{
+.home-container .school-info h1 {
+  padding-bottom: 3rem;
+  text-align: center;
+  color: var(--black-secondary-text);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.home-container .school-info h1 span {
+  color: blueviolet;
+}
+
+.home-container .school-info .cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--white-primary-text);
+  padding: 3rem;
+  border-radius: 10px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.teacher-info {
+  background-color: var(--white-primary-text);
+  padding: 1rem 5rem;
+}
+
+.home-container .all-class {
+  padding: 4rem 0 1rem 0;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.home-container .all-class h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.home-container .all-class h1 span {
+  color: blueviolet;
+}
+.home-container .all-class h4 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--black-secondary-text);
+}
+.home-container .my-school {
+  background-color: var(--white-primary-bg);
+  padding: 4rem;
+}
+
+.home-container .gpa-student {
+  padding: 4rem;
+}
+
+.director-section {
+  background-color: var(--white-primary-bg);
+  padding: 4rem;
+}
+.faq-section {
+  background-color: var(--white-secondary-bg);
+  padding: 4rem;
+}
+
+.faq-section > h1,
+h4 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.faq-section > h4 {
+  margin-bottom: 1.5rem;
+}
+
+.contact-section {
+  background-color: var(--white-primary-bg);
+  padding: 4rem;
+}
+
+.footer-section {
+  background-color: var(--white-secondary-bg);
+  padding: 4rem;
+}
+
+/* resoponsive start */
+@media screen and (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column-reverse;
     padding-bottom: 3rem;
-    text-align: center;
-    color: var(--black-secondary-text);
+  }
+
+  .home-container .school-info .cards {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home-container .hero-container,
+  .school-info,
+  .teacher-info,
+  .my-school,
+  .gpa-student,
+  .director-section,
+  .faq-section,
+  .contact-section,
+  .footer-section {
+    padding: 1rem 2rem;
+  }
+
+  .home-container .school-info .cards {
+    padding: 1rem 2rem !important;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .home-container .school-info {
+    padding: 1rem 2rem;
+  }
+  .home-container .school-info .cards {
+    grid-template-columns: auto;
+    gap: 1rem;
+    padding: 0rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .home-container .gpa-student {
+    padding: 2rem;
+  }
+  .home-container .hero-img img {
+    width: 300px;
+    height: 300px;
+  }
+  .home-container .hero-text h1 {
     font-size: 2rem;
-    text-transform: uppercase;
-}
+  }
 
-.home-container .school-info h1 span{
-    color: blueviolet;
+  .home-container .school-info h1 {
+    font-size: 1.5rem;
+  }
+  .home-container .all-class h1 {
+    font-size: 1.5rem;
+  }
+  .faq-section > h1 {
+    font-size: 1.5rem;
 }
-
-.home-container .school-info .cards{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: var(--white-primary-text);
-    padding: 3rem;
-    border-radius: 10px;
-    max-width: 1320px;
-    margin: 0 auto;
-}
-
-.teacher-info{
-    background-color: var(--white-primary-text);
-    padding: 1rem 5rem;
-}
-
-.home-container .all-class{
-    padding: 4rem 0 1rem 0;
-    max-width: 1320px;
-    margin: 0 auto;
-}
-
-.home-container .all-class h1{
-    text-align: center;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-}
-.home-container .all-class h1 span{
-    color: blueviolet;
-}
-.home-container .all-class h4{
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: var(--black-secondary-text);
-   
-}
-.home-container .my-school{
-    background-color: var(--white-primary-bg);
-    padding: 4rem;
-}
-
-.home-container .gpa-student{
-    padding: 4rem;
-}
-
-
-.director-section{
-    background-color: var(--white-primary-bg);
-    padding: 4rem;
-}
-.faq-section{
-    background-color: var(--white-secondary-bg);
-    padding: 4rem;
-}
-
-.faq-section > h1,h4{
-    text-align: center;
-    margin-bottom: 5px;
-}
-.faq-section > h4{
-    margin-bottom: 1.5rem;
-
-}
-
-.contact-section{
-    background-color: var(--white-primary-bg);
-    padding: 4rem;
-}
-
-.footer-section{
-    background-color: var(--white-secondary-bg);
-    padding: 4rem;
 }

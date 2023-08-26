@@ -1,4 +1,4 @@
-import { Autoplay, Navigation } from "swiper";
+import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { AllImages } from "../../utils/AllImages";
@@ -11,13 +11,12 @@ export default function App() {
   return (
     <>
       <Swiper
-        navigation={true}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
         }}
         loop={true}
-        modules={[Navigation, Autoplay]}
+        modules={[Autoplay]}
         className="directorSwiper"
       >
         <SwiperSlide>

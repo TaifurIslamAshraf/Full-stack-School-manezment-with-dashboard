@@ -11,7 +11,7 @@ const MySchoolInfo = ({ image, endNum, text }) => {
   });
 
   return (
-    <div className="mySchool-info">
+    <div className="mySchool-info-content">
       <img src={image} alt="my school info" />
       <div className="info">
         <h3>

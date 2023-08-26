@@ -2,3 +2,9 @@
   .contant{
     margin-top: 75px;
   }
+
+  @media screen and (max-width: 968px) {
+    .contant{
+      margin-top: 0;
+    }
+  }

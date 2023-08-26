@@ -48,3 +48,9 @@
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
+
+@media screen and (max-width: 720px) {
+    .class-card-model img{
+        height: auto;
+    }
+}

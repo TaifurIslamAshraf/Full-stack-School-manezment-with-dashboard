@@ -47,3 +47,9 @@
     padding: 15px;
     border-radius: 5px;
   }
+
+  @media screen and (max-width: 580px) {
+    .admission-form .half-inp{
+      grid-template-columns: 1fr;
+    }
+  }

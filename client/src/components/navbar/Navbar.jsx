@@ -1,15 +1,19 @@
 import "./navbar.css";
 
 import axios from "axios";
+import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Logo from "../../assets/images/education.png";
+import { NavToggle } from "../../context/navToggle";
 import { useGetUserQuery } from "../../features/api/userSlice";
 import { baseUrl } from "../../utils/baseUrl";
+import ToggleBtn from "../toggleBtn/ToggleBtn";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const { isSuccess: isMeSuccess } = useGetUserQuery();
+  const data = useContext(NavToggle);
 
   const handleLogout = async () => {
     const { data } = await axios.get(`${baseUrl}/api/logout`, {
@@ -25,7 +29,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${data.isShow ? "show-nav" : ""}`}>
+      <div className="navTo">
+        <ToggleBtn />
+      </div>
       <div className="nav-contant">
         <Link to="/" className="logo">
           <img loading="eager" src={Logo} alt="logo" />

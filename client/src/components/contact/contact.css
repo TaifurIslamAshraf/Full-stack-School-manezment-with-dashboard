@@ -36,3 +36,18 @@
     border-radius: 10px;
     border: none;
 }
+
+
+@media screen and (max-width: 1024px) {
+    .contact-details{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .contact-details .contact-card{
+        width: auto;
+    }
+    .contact-details iframe{
+        width: auto;
+    }
+}
