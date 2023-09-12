@@ -70,10 +70,9 @@ const deshboardMenu = [
   },
 ];
 
-const Sidebar = () => {
+const Navbar = () => {
   return (
-    
-      <div
+    <div
       className="bg-foreground hover:w-60 w-20
       h-screen fixed transition-all duration-150 group text-secondary hover:px-4 px-3 overflow-y-auto scrollbar-thin scrollbar-thumb-transparent py-6 z-40"
     >
@@ -111,4 +110,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Navbar;
